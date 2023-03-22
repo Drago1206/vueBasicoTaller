@@ -14,15 +14,15 @@
         <input type="text" v-model="mensaje">
         <h1>{{mensaje}}</h1>
             <div>
-                <input type="radio" v-model="objeto" v-bind:value="true">
-                <input type="radio" v-model="objeto" v-bind:value="false">
-            
+                <input type="radio" v-model="objeto" v-bind:value="true">ver
+                <input type="radio" v-model="objeto" v-bind:value="false">No ver :3
                 <form action="">
-                    <input type="text" v-show="objeto">
-                    <button v-show="objeto">Crear objeto</button>
+                    <input type="text"  v-show="objeto" v-model="nuevoobj">
+                    <ul>
+                        <li v-show="objeto" v-for="caso of objetos">{{caso}}</li>
+                    </ul>
+                    <button v-show="objeto"  @click.prevent="nuevoobjt">Crear objeto</button>
                 </form>
-                    <div v-if="button" == null ></div>
-                    <div v-else>{{}}</div>
                 </div>
             
     </div>
