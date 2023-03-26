@@ -7,8 +7,12 @@ export  default{
             button: null,
             objetos:[],
             nuevoobj:'',
-            Viearray:" ",
-            nuevoarray: ''
+            clic: false,
+            selec:false,
+            elm:false,
+            mapes:false,
+            nuevoarray:'',
+            mapeo:''
         }
     },
     methods:{
@@ -25,8 +29,25 @@ export  default{
 
 
         },
-        operacionescomb(){
-            
+        primeroo(){
+            this.objetos.shift()
+        },
+        ultimoo(){
+            this.objetos.pop()
+        },
+        comienzo(){
+            this.objetos.unshift({
+                dato: this.nuevoarray
+            })
+            console.log(this.objetos)
+        },
+        final(){
+            this.objetos.push({
+                dato:this.nuevoarray
+            })
+        },
+        mape(){  this.mapeo.map((caso)=>({caso}))
+
         }
     }
     
